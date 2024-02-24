@@ -36,17 +36,19 @@ function App() {
       }
       {/*{(isBattle === 'start' &&*/}
       {/*  // <img className={styles.animation} src={battleAnimation} alt="battle"/>*/}
-      <div className={styles.animation}>
-        <Lottie
-          height={300}
-          width={300}
-          options={{
-            loop: true,
-            autoplay: true,
-            animationData: animationData,
-          }}
-        />
-      </div>
+      {(isBattle === 'start') &&
+        <div className={styles.animation}>
+          <Lottie
+            height={300}
+            width={300}
+            options={{
+              loop: true,
+              autoplay: true,
+              animationData: animationData,
+            }}
+          />
+        </div>
+      }
       {(result === 'victory') &&
         <h1 className={styles.result}>Victory</h1>
       }
